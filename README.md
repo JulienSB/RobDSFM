@@ -10,3 +10,7 @@ Please note that the software is designed for use on MATLAB and uses spm12 to do
 The following subsections detail the installation and use of the software.
 Notice also that the package uses and contains subroutines in R.
 
+
+
+
+
