@@ -13,7 +13,7 @@ disp(sz);
 
 %% 2- Loading Data:
 %===================
-
+  
 xaxis = 1:64;
 yaxis = 1:64;
 zaxis = 1:15;
