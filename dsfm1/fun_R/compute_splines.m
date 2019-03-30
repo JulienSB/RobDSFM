@@ -1,18 +1,30 @@
-function [splines, X] = compute_splines(ni, K_vec)
+function [splines, X, Rpath] = compute_splines(ni, K_vec, Rpath)
 % Computes the splines function and the covariates X.
 % Args:
 %   ni :
 %   K_vec :
-
+    if nargin < 3
+        if exist('R-3.5.3') == 7 
+            Rpath = 'R-3.5.3\bin';
+        else
+            Rpath = [];
+        end
+    end
     old_cd = cd;    
     filepath = fileparts(fileparts(fileparts(which('location_fmri_dsfm1.m'))));
     cd(filepath)
     save('dsfm1\fun_R\input.mat', 'ni', 'K_vec') % save the intput
-    RunRcode('dsfm1\fun_R\splines.R', 'R-3.5.3\bin')            % Run R script spline.R
-    out = load('dsfm1\fun_R\output.mat');        % load the ouput
-    delete('dsfm1\fun_R\input.mat');
-    delete('dsfm1\fun_R\output.mat');
-    delete('dsfm1\fun_R\splines.R.log');
+    
+    try
+        Rpath = RunRcode('dsfm1\fun_R\splines.R', Rpath);      
+        out = load('dsfm1\fun_R\output.mat');        % load the ouput
+        delete('dsfm1\fun_R\input.mat');
+        delete('dsfm1\fun_R\output.mat');
+        delete('dsfm1\fun_R\splines.R.log');
+    catch ME
+        error('Cannot find R path. Please provide Rpath or install R in the programm files.')
+    end
+    
     if exist('.RData') == 2
         delete('.RData')
     end
