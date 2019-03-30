@@ -1,4 +1,8 @@
-library(orthogonalsplinebasis)
+if(!require(orthogonalsplinebasis)){
+  install.packages("orthogonalsplinebasis")
+  library(orthogonalsplinebasis)  
+}
+
 
 B_splines  <-  function(X, ni, K_vec) {
   X <- X.comp(ni)

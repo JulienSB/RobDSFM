@@ -23,7 +23,7 @@ ni = [size(xaxis, 2), size(yaxis, 2), size(zaxis, 2)] % vector of number of voxe
 [Y, X, Image, Data] = getDATA(xaxis, yaxis, zaxis, info, T);  
 [splines, X] = compute_splines(ni, K_vec);    % Compute splines and the covariates X
 % You can provide an explicit link for R. For example:
-% [splines, X] = compute_splines(ni, K_vec, 'R-3.5.3\bin'); 
+% [splines, X] = compute_splines(ni, K_vec, 'pathtoR\R-3.5.3\bin'); 
 plotY(Y, ni);        % plot of Y
 
 

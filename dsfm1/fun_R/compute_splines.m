@@ -4,11 +4,7 @@ function [splines, X, Rpath] = compute_splines(ni, K_vec, Rpath)
 %   ni :
 %   K_vec :
     if nargin < 3
-        if exist('R-3.5.3') == 7 
-            Rpath = 'R-3.5.3\bin';
-        else
-            Rpath = [];
-        end
+        Rpath = [];
     end
     old_cd = cd;    
     filepath = fileparts(fileparts(fileparts(which('location_fmri_dsfm1.m'))));

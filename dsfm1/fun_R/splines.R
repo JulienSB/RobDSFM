@@ -1,4 +1,7 @@
-library(R.matlab)
+if(!require(R.matlab)){
+  install.packages("R.matlab")
+  library(R.matlab)
+}
 # library(orthogonalsplinebasis)
 source("dsfm1/fun_R/lib_simulate_data.R")
 source("dsfm1/fun_R/lib_splines.R")
