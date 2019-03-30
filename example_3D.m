@@ -1,6 +1,5 @@
 % directory:
 addpath(genpath('dsfm1'))
-addpath(genpath('spm12'))
 
 
 %% 1- fMRI Data Information:
