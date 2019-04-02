@@ -1,4 +1,4 @@
-### Robust estimation of Dynamic Semiparametric Factor Model (DSFM) for fMRI data
+# Robust estimation of Dynamic Semiparametric Factor Model (DSFM) for fMRI data
 
 The present repository contains the software used to estimate DSFM models with non-robust and robust methods on fMRI data, as it is performed in the paper "Robust sieve M-estimation with an application to dimensionality reduction".
 
@@ -9,7 +9,7 @@ Notice that the function compute_splines.m implicitly makes use of R.
 Therefore, if you do not have R, you should install it: see https://cran.r-project.org/.
 
 
-# Usage
+## Usage and Contents
 
 To perform inference with DSFM, it is needed to convert the 4D images to a matrix representation. Then one can convert the estimates back to a 4D object.
 The folder contains following main functions:
@@ -23,7 +23,7 @@ The folder contains following main functions:
 - plot3D: plot slices of a 4D object. The input time fixes the fourth dimension.
 
 
-# Contents:
+## Data
 
 An exemplary fMRI data (for one subject), called data_example.nii.gz, 
 can be found in this repository.
