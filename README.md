@@ -5,22 +5,22 @@ The present repository contains the software used to estimate DSFM models with n
 
 ## Languages
 The software is designed for use on MATLAB. 
-Notice that the function compute_splines.m implicitly makes use of R.
+Notice that the function compute_splines.m implicitly make use of R.
 Therefore, if you do not have R, you should install it: see https://cran.r-project.org/.
 
 
 ## Usage and Contents
 
-To perform inference with DSFM, it is needed to convert the 4D images to a matrix representation. Then one can convert the estimates back to a 4D object.
-The folder contains following main functions:
-- getDATA.m: convert a 4D (space and time) dimensional fMRI object into a matrix, usable for inference with DSFM.
-- compute_splines.m: compute the splines and the 3D matrix of covariates, which gives the voxel index.
-  It makes use of the package orthogonalsplinebasis (available on CRAN).
-- OLS: Least-suares (non-robust) estimation of the DSFM.
+To perform inference with DSFM, it is needed to convert the fMRI 4 dimensional (space and time) images to a matrix representation. Then one can convert the estimates back to 4D objects to visualize it.
+The folder contains the following main functions:
+- getDATA: convert a 4D (space and time) dimensional fMRI object into a matrix, usable for inference with DSFM.
+- compute_splines: compute the splines and the 3D matrix of covariates, which gives the voxel index.
+  The function makes use of the packages orthogonalsplinebasis and R.matlab (available on R CRAN).
+- OLS: Least-squares (non-robust) estimation of the DSFM.
 - ROB: Robust estimation of the DSFM.
-- getImage: Convert the matrix to the matrix representation.
-- plotY: allow to plot matrices as 3D images. It relies on getImage and plot3D.
-- plot3D: plot slices of a 4D object. The input time fixes the fourth dimension.
+- getImage: convert the matrix data to a 4D representation.
+- plotY: plot matrices as images (slices of the brain). It relies on getImage and plot3D.
+- plot3D: plot 4D object. The input time fixes the fourth dimension.
 
 
 ## Data
@@ -32,8 +32,8 @@ can be found in this repository.
 
 ## Repository authors
 
-- Julien Bodelet Ph.D. student, University of Geneva
-- Davide La Vecchia Associate Professor in Statistics, University of Geneva
+- Julien Bodelet, Ph.D. student at the Research Center for Statistics (RCS), University of Geneva
+- Davide La Vecchia, Associate Professor in Statistics at the Research Center for Statistics (RCS), University of Geneva
 
 
 ## Reference
