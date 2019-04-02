@@ -1,5 +1,5 @@
 function Image = getImage(Y, ni)
-    % Create 4 dimensional representation of the data matrix.
+    % Convert 4D fMRI data to a matrix representation.
     % Args:
     %   Y:      matrix representation of the data.
     %   ni:     vector of the number of voxels in each dimension.

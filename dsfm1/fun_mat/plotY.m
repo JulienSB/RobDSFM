@@ -1,5 +1,5 @@
 function plotY(Y, ni, time, plot_dim)
-    % Create a plot of the data (matrix representation).
+    % Plot of the data (matrix representation).
     % Args:
     %   Y:          data matrix.
     % 	time:       time-point at which the image is displayed.

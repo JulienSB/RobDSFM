@@ -1,5 +1,5 @@
 function plot3D(Image, time, plot_dim)
-    % Create a plot of an Image (4-dimensional object).
+    % plot slices of a 4D object.
     % Args:
     %   Image:      4-dimensional array, last dimension is time.
     % 	time:       time-point at which the image is displayed.

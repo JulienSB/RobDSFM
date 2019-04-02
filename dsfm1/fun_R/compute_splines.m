@@ -1,5 +1,5 @@
 function [splines, X, Rpath] = compute_splines(ni, K_vec, Rpath)
-% Computes the splines function and the covariates X.
+% Computes the splines function and the covariates X (the coordinate of the voxels).
 % Args:
 %   ni :
 %   K_vec :
