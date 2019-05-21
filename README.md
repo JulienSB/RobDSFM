@@ -38,7 +38,7 @@ can be found in this repository.
 
 ## Reference
 
-- Bodelet, J. and La Vecchia D. (2019) Robust sieve M-estimation with an application to dimensionality reduction
+- Bodelet, J. and La Vecchia D. (2019) Robust sieve M-estimation with an application to dimensionality reduction, submitted.
 
 
 
